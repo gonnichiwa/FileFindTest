@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class FileSearcher {
 	public static void main(String[] args) throws IOException {
-		String rootDirPath = "C:\\dev-Source\\FileFindTest\\rootTestDir\\";
+		String rootDirPath = "C:\\dev-Source\\cafe24FTP\\_\\sde_design\\skin6";
 
 		new FileSearcher().subDirSearch(rootDirPath);
 
