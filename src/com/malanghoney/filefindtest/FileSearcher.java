@@ -5,7 +5,8 @@ import java.io.IOException;
 
 public class FileSearcher {
 	public static void main(String[] args) throws IOException {
-		String rootDirPath = "C:\\dev-Source\\cafe24FTP\\_\\sde_design\\skin3\\_wg\\import";
+		String rootDirPath = "C:\\dev-Source\\FileFindTest\\rootTestDir\\";
+
 		new FileSearcher().subDirSearch(rootDirPath);
 
 		System.out.println("종료");
@@ -17,8 +18,9 @@ public class FileSearcher {
 		assert fileList != null;
 		for (File file : fileList) {
 			if (file.isFile() && new FileSearcher().getFileExt(file,"html")) {
-				System.out.println("파일입니다. 파일경로(명) \t:\t " + file.getAbsolutePath());
 				// TODO : 파일이면 코드 검색
+				FileReader.getInstance()
+						.printHangulCode(rootDirPath,file.getName());
 			} else if (file.isDirectory()) {
 				System.out.println("디렉토리입니다. 경로 \t:\t " + file.getAbsolutePath());
 				// 서브디렉토리 존재하면 재귀 호출
