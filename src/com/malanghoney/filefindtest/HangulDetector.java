@@ -9,7 +9,6 @@ class HangulDetector {
 	private EncodingChanger ec = new EncodingChanger();
 
 	private static class LazyHolder {
-
 		private static final HangulDetector INSTANCE = new HangulDetector();
 	}
 

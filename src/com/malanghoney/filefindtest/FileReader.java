@@ -28,14 +28,14 @@ class FileReader {
 
 			System.out.println("****** 경로\t : \t " + rootDirPath);
 			System.out.println("****** 파일명\t : \t " + targetFileName);
-			System.out.println("============한글 포함 라인=================");
+			System.out.println("=============================한글 포함 라인==================================");
 			// read source String each Line
 			while ((lineString = br.readLine()) != null) {
 				// 한글 감지된 라인만 출력
 				if(hd.isContainHangul(lineString)) System.out.println("Line"+ lineNum + "\t" + lineString);
 				lineNum++;
 			}
-			System.out.println("============ END \t : \t " + rootDirPath + targetFileName + " =======");
+			System.out.println("=============================\t\tEND\t\t====================================");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
