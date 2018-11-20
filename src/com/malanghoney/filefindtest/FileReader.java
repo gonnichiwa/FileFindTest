@@ -35,7 +35,7 @@ class FileReader {
 				if(hd.isContainHangul(lineString)) System.out.println("Line"+ lineNum + "\t" + lineString);
 				lineNum++;
 			}
-			System.out.println("=============================\t\tEND\t\t====================================");
+			System.out.println("=============================\t\tEND\t\t====================================\n\n");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

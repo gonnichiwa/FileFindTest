@@ -18,7 +18,7 @@ public class FileSearcher {
 		assert fileList != null;
 		for (File file : fileList) {
 			if (file.isFile() && new FileSearcher().getFileExt(file,"html")) {
-				// TODO : 파일이면 코드 검색
+				// 파일이면 코드 검색, 한글(UTF-8) 포함된 라인 출력
 				FileReader.getInstance()
 						.printHangulCode(rootDirPath,file.getName());
 			} else if (file.isDirectory()) {
